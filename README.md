@@ -10,7 +10,24 @@
 
 - Potential Outcomes Framework: This approach considers every possible outcome that could result from a particular treatment or action for an individual.
 
-- Average Treatment Effect (ATE): This is the average effect of a treatment across a population, as we can't observe the individual effects directly.
+$Y_{i}$  the observed outcome variable for unit i.
+
+$$ T_i=\begin{cases}
+1 \ \text{if unit i received the treatment}\\
+0 \ \text{otherwise}\\
+\end{cases} $$
+
+$Y_{0i}$  is the potential outcome for unit i without the treatment.
+
+$Y_{1i}$  is the potential outcome for the same unit i with the treatment.
+
+- ITE (Individual Treatment Effect)
+ $Y_{1i} - Y_{0i}$
+
+- ATE (Average Treatment Effect) : This is the average effect of a treatment across a population, as we can't observe the individual effects directly.  $ATE = E[Y_1 - Y_0]$
+
+- ATT (average Treatement effect on the treated
+$ATT = E[Y_1 - Y_0 | T=1]$
 
 ## Bias and the Importance of Randomization
 
