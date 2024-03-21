@@ -46,3 +46,28 @@ $E[Y_0|T=0]=E[Y_0|T=1]$
 $(Y_0, Y_1) \perp T$
 
 - Observational Studies and Assignment Mechanisms: When randomization isn’t possible, understanding the mechanism by which treatments are assigned is critical for causal inference. This helps to comprehend how the data we observe has been generated.
+
+## Stats Review
+
+- Standard Error
+$\hat{\sigma} = \sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_{i}-\bar{x})^2}$
+
+- Confidence Intervals
+
+-- Confidence intervals represent the range of uncertainty around our estimates.
+  
+-- As sample size increases, confidence intervals become narrower, standard error is inversely proportional to the square root of sample size.
+
+- Hypothesis Testing
+
+-- Set a null hypothesis (H0) and evaluated the possibility of rejecting it.
+  
+-- In our case, we tested the null hypothesis that there's no difference in academic achievement between online and face-to-face classes.
+
+-- The z-statistic measures how extreme the observed difference is.
+
+-- The p-value indicates the probability of obtaining the observed results if the null hypothesis is true.
+
+-- A smaller p-value strengthens the case against the null hypothesis.
+
+
