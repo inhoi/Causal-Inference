@@ -8,7 +8,7 @@
   
 ## Potential Outcomes and Average Treatment Effect
 
-- Potential Outcomes Framework: This approach considers every possible outcome that could result from a particular treatment or action for an individual.
+- Potential Outcomes : This approach considers every possible outcome that could result from a particular treatment or action for an individual.
 
 $Y_{i}$  the observed outcome variable for unit i.
 
@@ -31,10 +31,14 @@ $ATT = E[Y_1 - Y_0 | T=1]$
 
 ## Bias and the Importance of Randomization
 
-Bias: This arises when the treatment and control groups differ in ways other than the treatment before the intervention.
-Randomization: It helps to neutralize bias by ensuring all other variables are equally distributed across treatment and control groups.
+- Bias: This arises when the treatment and control groups differ in ways other than the treatment before the intervention.
+
+$$ E[Y|T=1] - E[Y|T=0] = \underbrace{E[Y_1 - Y_0|T=1]} + \underbrace{\{ E[Y_0|T=1] - E[Y_0|T=0] \}} $$
+
+- Randomization: It helps to neutralize bias by ensuring all other variables are equally distributed across treatment and control groups.
 
 ## Challenges When Randomisation Is Not Feasible
 
-Randomised Experiments: These are often considered the gold standard for causal inference because they control for both observed and unobserved confounding variables by random assignment.
-Observational Studies and Assignment Mechanisms: When randomization isn’t possible, understanding the mechanism by which treatments are assigned is critical for causal inference. This helps to comprehend how the data we observe has been generated.
+- Randomised Experiments: These are often considered the gold standard for causal inference because they control for both observed and unobserved confounding variables by random assignment.
+
+- Observational Studies and Assignment Mechanisms: When randomization isn’t possible, understanding the mechanism by which treatments are assigned is critical for causal inference. This helps to comprehend how the data we observe has been generated.
