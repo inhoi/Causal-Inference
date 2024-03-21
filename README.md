@@ -70,4 +70,23 @@ $\hat{\sigma} = \sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_{i}-\bar{x})^2}$
 
 -- A smaller p-value strengthens the case against the null hypothesis.
 
+## Grahpical Causal Models
+
+1. Confounding
+- Occurs when a common cause affects both treatment and outcome
+- Example: Intelligence affecting both education level and income
+
+2. Selection Bias
+- Occurs from the data selection process for analysis
+- Example: Pre-existing differences between treated and untreated groups in a study
+
+4. Conver Contraol for Mediators
+- Happens when controlling too much for variables that mediate treatment effects
+- Example: Overcontrolling for job type in the relationship between education and income
+
+
+
+![image](https://github.com/inhoi/Causal-Inference/assets/76868046/b1d4babc-c9e8-4fa9-87a7-166f388d0543)
+![image](https://github.com/inhoi/Causal-Inference/assets/76868046/696c9b2c-8a2b-47fa-9547-619e89e4779f)
+
 
