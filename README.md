@@ -86,4 +86,24 @@ $\hat{\sigma} = \sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_{i}-\bar{x})^2}$
 ![image](https://github.com/inhoi/Causal-Inference/assets/76868046/b1d4babc-c9e8-4fa9-87a7-166f388d0543)
 ![image](https://github.com/inhoi/Causal-Inference/assets/76868046/696c9b2c-8a2b-47fa-9547-619e89e4779f)
 
+## Chapter 5 : The Unreasonable Effectiveness of Linear Regression
 
+- Regression Analysis --> A statistical method to analyze the relationship between two variables, such as education duration and wages.
+  
+- A/B Testing and Confidence Intervals -->Regression analysis can be used to perform A/B testing and calculate confidence intervals, helping to determine if differences between groups are statistically significant.
+  
+- Conditional Expectation --> The expected outcome given a specific condition, analyzed through linear approximation in regression analysis.
+  
+- Multivariate Regression Analysis --> Allows simultaneous analysis of the impact of multiple independent variables on a dependent variable.
+  
+- Omitted Variable Bias --> The distortion in regression analysis results due to omitted variables. It's important to control for omitted variables and consider confounding variables.
+
+## Chapter 6 : Grouped and Dummy Regression
+
+- Weighted Linear Regression --> Not all data points have equal importance in linear regression. Larger sample sizes should be given more weight due to lower variance. 
+
+- Dummy Regression Analysis --> A non-parametric model that doesn't assume a functional form for how treatment affects the outcome. It allows independent estimation of the impact of each category of a variable.
+
+- Regression with All Dummy Variables --> When all variables are dummies, the model calculates the average wages for each category. This model is very flexible but can lose statistical significance with too many categories. 
+
+## Chapter 7 : Beyond Confounders
