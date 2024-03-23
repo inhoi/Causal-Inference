@@ -107,3 +107,34 @@ $\hat{\sigma} = \sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_{i}-\bar{x})^2}$
 - Regression with All Dummy Variables --> When all variables are dummies, the model calculates the average wages for each category. This model is very flexible but can lose statistical significance with too many categories. 
 
 ## Chapter 7 : Beyond Confounders
+
+- Good Control Variables --> These are variables that predict the outcome variable but not the treatment variable. Including good control variables in the model helps explain variability in the outcome variable, thereby increasing the model's accuracy. 
+
+- Variables to Be Cautious With --> Variables that only affect the treatment variable should be added to the model with caution. Including such variables can reduce the variability of the treatment variable, making it harder to detect its causal effect. 
+
+- Selection Bias --> Occurs when controlling for common effects or variables in the causal path from the treatment variable to the outcome variable. To avoid selection bias, do not control for variables that are between the treatment and outcome variables or are common effects of both. 
+
+- Bad COP --> A specific case of selection bias that can occur even in randomized experiments. It involves modeling the probability of a non-zero outcome in the first stage and the value of the outcome given it is non-zero in the second stage. To correctly estimate the effect of the treatment variable, both zero and non-zero outcomes should be considered together.
+
+## Chapter 8 : Instrumental Variables
+
+- Instrumental Variables (IV) --> Variables that are correlated with the treatment variable but only affect the outcome variable through the treatment variable. For example, when measuring the effect of education on wages, the quarter of birth can be used as an instrumental variable to address the bias caused by omitted variables like individual ability.
+
+- Two-Stage Least Squares (2SLS) --> A method to estimate causal effects using instrumental variables. The first stage predicts the treatment variable using the instrumental variable, and the second stage uses this predicted treatment variable to predict the outcome variable.
+
+- Weak Instruments --> When the correlation between the instrumental variable and the treatment variable is weak, 2SLS estimates can become unstable, leading to large standard errors and potentially inaccurate estimates of the true parameter values.
+
+- Consistency and Bias in 2SLS --> While 2SLS is consistent, meaning that it approaches the true parameter value as the sample size increases, it can still be biased, especially in finite samples. The use of multiple instrumental variables can make 2SLS estimates closer to ordinary least squares (OLS) estimates.
+
+## Chapter 9 : Non Compliance and LATE
+
+- Instrumental Variables (IV) as a Causal Chain --> IVs are viewed as causing the treatment, which in turn causes the outcome. This perspective helps in understanding the causal effects estimated using IVs.
+
+- Compliance and Local Average Treatment Effect (LATE) --> The concept of compliance is important in IV estimation. LATE refers to the average treatment effect for the subgroup of 'compliers'—individuals whose treatment status is influenced by the instrumental variable.
+
+- Key Assumptions for IV Estimation
+ 1. Independence Assumption: The instrumental variable is as good as randomly assigned.
+ 2. Exclusion Restriction: The potential outcomes of the treatment are the same across different IV groups.
+ 3.  First Stage Assumption: The instrumental variable has an impact on the treatment.
+
+## Chapter 10 :
