@@ -1,14 +1,14 @@
 # Causal-Inference
 
-- Causal Inference: It is the process of drawing a conclusion about a causal connection based on the conditions of the occurrence of an effect. It aims to identify whether a change in one variable would lead to a change in another variable.
+## Chapter 1 : Introduction To Causality
 
-## Causation vs. Correlation
+- Importance --> Essential for understanding the 'why' and 'how' in data science, beyond just predictions.
 
-- Correlation: It indicates that there is a statistical relationship between two variables, but it doesn’t imply causation. For example, the provision of tablets in schools and improved academic performance may correlate, but other factors like socioeconomic status could be at play.
+- Fundamental Problem --> We can't observe both potential outcomes for the same unit, leading to the need for latent outcomes and comparability of groups. 
+
+- Estimating Causal Effects --> The goal is to eliminate bias and estimate the pure treatment effect to understand causality. 
   
-## Potential Outcomes and Average Treatment Effect
-
-- Potential Outcomes : This approach considers every possible outcome that could result from a particular treatment or action for an individual. 
+##### Potential Outcomes and Average Treatment Effect
 
 $Y_{i}$  the observed outcome variable for unit i.
 
@@ -29,48 +29,45 @@ $Y_{1i}$  is the potential outcome for the same unit i with the treatment.
 - ATT (average Treatement effect on the treated
 $ATT = E[Y_1 - Y_0 | T=1]$
 
-## Bias and the Importance of Randomization
-
-- Bias: This arises when the treatment and control groups differ in ways other than the treatment before the intervention.
+##### Bias
 
 $$ E[Y|T=1] - E[Y|T=0] = \underbrace{E[Y_1 - Y_0|T=1]} + \underbrace{\{ E[Y_0|T=1] - E[Y_0|T=0] \}} $$
 
-Association becomes causation only when bias is absent. We can say that bias is not present when, other than the treatment received, the target and control groups are equivalent or similar. In other words, if the groups are alike in all respects except for the intervention, the association can be considered causal.
+## Chapter 2 : Randomised Experiments
 
-$E[Y_0|T=0]=E[Y_0|T=1]$
+- Bias Elimination --> RCTs ensure comparability between treatment and control groups, eliminating bias and allowing for causal inference.
 
-## Randomization
+- Random Assignment --> Subjects are randomly assigned to treatment or control groups, ensuring that any differences are due to the treatment effect. 
 
-- Randomised Experiments: Distribute individuals randomly into the treatment group and the control group. This random allocation ensures that the two groups are comparable, which allows for the assessment of the causal effect of the treatment.
+- Limitations --> While RCTs are the gold standard, they may not always be feasible due to cost, ethical concerns, or practicality.
+
+- Value --> Despite limitations, RCTs are invaluable for establishing causality when feasible.
 
 $(Y_0, Y_1) \perp T$
 
-- Observational Studies and Assignment Mechanisms: When randomization isn’t possible, understanding the mechanism by which treatments are assigned is critical for causal inference. This helps to comprehend how the data we observe has been generated.
+## Chapter 3 : Stats Review: The Most Dangerous Equation
 
-## Stats Review
+- Standard Error and Confidence Intervals: Standard error measures the accuracy of the sample mean, and confidence intervals provide a range where the true population mean is likely to fall.
 
-- Standard Error
 $\hat{\sigma} = \sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_{i}-\bar{x})^2}$
 
-- Confidence Intervals
+ As sample size increases, confidence intervals become narrower, standard error is inversely proportional to the square root of sample size.
 
--- Confidence intervals represent the range of uncertainty around our estimates.
-  
--- As sample size increases, confidence intervals become narrower, standard error is inversely proportional to the square root of sample size.
+- Hypothesis Testing: We use hypothesis testing to determine if the observed difference between groups is statistically significant.
 
-- Hypothesis Testing
+1 -  Set a null hypothesis (H0) and evaluated the possibility of rejecting it.
 
--- Set a null hypothesis (H0) and evaluated the possibility of rejecting it.
-  
--- In our case, we tested the null hypothesis that there's no difference in academic achievement between online and face-to-face classes.
+2 -  In our case, we tested the null hypothesis that there's no difference in academic achievement between online and face-to-face classes.
 
--- The z-statistic measures how extreme the observed difference is.
+3 -  The z-statistic measures how extreme the observed difference is.
 
--- The p-value indicates the probability of obtaining the observed results if the null hypothesis is true.
+4 -  The p-value indicates the probability of obtaining the observed results if the null hypothesis is true.
 
--- A smaller p-value strengthens the case against the null hypothesis.
+5 -  A smaller p-value strengthens the case against the null hypothesis.
 
-## Grahpical Causal Models
+- p-Value: The p-value indicates the probability of observing the results (or more extreme) under the null hypothesis. A low p-value suggests rejecting the null hypothesis. 
+
+## Chapter 4 : Graphical Causal Models
 
 1. Confounding
 - Occurs when a common cause affects both treatment and outcome
