@@ -137,4 +137,32 @@ $\hat{\sigma} = \sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_{i}-\bar{x})^2}$
  2. Exclusion Restriction: The potential outcomes of the treatment are the same across different IV groups.
  3.  First Stage Assumption: The instrumental variable has an impact on the treatment.
 
-## Chapter 10 :
+## Chapter 10 : Matching
+
+- Subclassification Estimator --> Similar to regression analysis, it divides data into subgroups based on the values of X and calculates the average difference between treatment and control groups within each subgroup. These average differences are then combined to estimate the ATE for the entire dataset.
+
+- Matching --> Another method to control for confounding variables. It pairs each unit in the treatment group with a similar unit in the control group and compares them to reduce the impact of confounding variables. The matching estimator calculates the difference between each pair and averages these differences to estimate the ATE.
+
+- Bias in Matching Estimates --> There is a risk of bias if the matched pairs are not perfectly similar, i.e., if there are still differences in confounding variables between the matched treatment and control units. To reduce this bias, bias correction can be performed on the differences between matched pairs.
+
+- Curse of Dimensionality --> Affects both matching and subclassification estimators. As the number of variables increases, it becomes harder to find similar pairs, leading to increased distances between matched pairs and potential bias. Additionally, with more variables, the number of subgroups increases exponentially, leading to sparsity in the data and a lack of data in some subgroups.
+
+## Chapter 11 : Propensity Score
+
+- Propensity Score --> A statistical technique used to reduce bias in estimating treatment effects in observational data. The propensity score represents the probability of an individual receiving treatment (e.g., participating in a program, taking a medication) and helps balance baseline characteristics between treatment and control groups.
+
+- Challenges in Using Propensity Scores
+
+ 1) Variable Selection --> If important variables are not included in the propensity score model, the estimated effect can be biased. For instance, if students' motivation for learning or teachers' instructional styles influence seminar participation and academic achievement but are omitted, the propensity scores may not achieve complete balance.
+    
+ 3) Extreme Propensity Scores --> If there are students with very low or high probabilities of seminar participation, the weights for these extreme cases can become very large, increasing the variance of the estimates.
+
+## Chapter 12 : Doubly Robust Estimation
+
+- Doubly Robust Estimation --> A method combining linear regression and propensity score techniques to estimate causal effects. The key advantage is that the estimation remains valid if either the propensity score model or the outcome model is correctly specified, offering robustness against model misspecification.
+
+- Propensity Score Estimation --> Initially, a logistic regression model is used to estimate the propensity scores, which represent the probability of receiving a specific treatment (e.g., attending a seminar). This model calculates the probability of seminar attendance for each student, considering characteristics such as their expectations of success and school environment.
+
+- Conditional Expectation Estimation --> Next, a linear regression model predicts each student's academic achievement, taking into account their characteristics and seminar attendance.
+
+- Causal Effect Estimation --> Finally, the propensity scores and conditional expectation models are combined to estimate the causal effect. The crucial aspect here is that the estimation can be valid even if only one of the models (propensity score or conditional expectation) is accurate. For instance, even if the propensity score model is not perfect, the causal effect can still be estimated accurately if the conditional expectation model is correct.
